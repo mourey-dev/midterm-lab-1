@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\OrderItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::post("/", [OrderController::class, "show"]);
-Route::get("/order-item/{id}", [OrderItemController::class, "getOrderItems"]);
+Route::get("/order-item/{id}", [OrderController::class, "getOrderItems"]);
